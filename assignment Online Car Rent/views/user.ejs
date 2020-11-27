@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <style>
+        table td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+		<tr>
+			<td>ID</td>
+			<td>Email</td>
+			<td>PASSWORD</td>
+			<td>TYPE</td>
+			<td>Action</td>
+		</tr>
+
+        <% for(var i=0; i< userlist.length; i++ ){ %>
+		<tr>
+			<td><%= userlist[i].userID %></td>
+			<td><%= userlist[i].username %></td>
+			<td><%= userlist[i].password %></td>
+			<td><%= userlist[i].userType %></td>
+			<td>
+				<a href="/user/edit/<%=userlist[i].userID%>">Edit</a> | 
+				<a href="/user/delete/<%=userlist[i].userID%>">Delete</a>  
+			</td>
+		</tr>
+		<% } %>
+	</table>
+	</table>
+</body>
+</html>
