@@ -103,5 +103,12 @@ module.exports = {
     });
   },
 
+  getAllCar: function (callback) {
+    var sql = "select * from car";
+    db.getResults(sql, function (results) {
+      callback(results);
+    });
+  },
+
   // car____end
 };

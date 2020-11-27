@@ -6,6 +6,15 @@
     <title>Home</title>
 </head>
 <body>
-    <a href="/home/edit/<%= user %>">Update info</a>
+    <a href="/home/edit/<%= user %>">Update your info</a> <br> <br>
+    
+    <% for(var i=0; i< car.length; i++ ){ %>
+    <ul>
+        <li><%= car[i].car_name %></li>
+        <li>$<%= car[i].price %></li>
+        <li><%= car[i].description %></li>
+    </ul>
+    <% } %>
+
 </body>
 </html>
